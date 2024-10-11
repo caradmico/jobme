@@ -1,0 +1,89 @@
+/* Center the entire page content */
+body {
+    background-color: #1E2A38;  /* Deep muted navy blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the main container */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);  /* Transparent white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Style the form elements and buttons */
+form {
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #3498db;  /* Light blue button */
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}

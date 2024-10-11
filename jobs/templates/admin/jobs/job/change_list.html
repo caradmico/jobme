@@ -1,0 +1,11 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+<div class="object-tools">
+    <ul class="object-tools">
+        <li>
+            <a href="{% url 'admin:scrape_jobs' %}" class="button">Scrape New Jobs</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

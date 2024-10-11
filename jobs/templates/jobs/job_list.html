@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Job Listings{% endblock %}
+
+{% block header %}Job Listings{% endblock %}
+
+{% block content %}
+    <!-- Button to Find New Jobs -->
+    <form method="POST" action="{% url 'fetch_jobs' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn">Find New Jobs</button>
+    </form>
+
+    <!-- Job Listings Table -->
+    <table border="1">
+        <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Link</th>
+        </tr>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.title }}</td>
+            <td>{{ job.company }}</td>
+            <td>{{ job.location }}</td>
+            <td>{{ job.salary }}</td>
+            <td><a href="{{ job.url }}" target="_blank">View Job</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
